@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = "False"
+DEBUG = False
 
 ALLOWED_HOSTS = ['str4-ecommerce-sweetmentor.c9users.io', 'chestergreen-ecommerce-app.herokuapp.com']
 
