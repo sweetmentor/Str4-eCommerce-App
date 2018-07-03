@@ -1,0 +1,22 @@
+{% extends 'home/base.html' %}
+{% load static from staticfiles %} 
+
+
+{% block content %}
+
+<div class="container">
+    <form action="{% url 'search' %}" method="get">
+        <input type="text" name="query">
+        <button type="submit" value="Search by word">Search</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
