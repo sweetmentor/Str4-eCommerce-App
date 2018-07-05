@@ -23,6 +23,14 @@ footer {
     text-align: right;
     padding-bottom: 40px;
 
-    
-    
+}
+
+.img-circle{
+    width:100px;
+    height: 100px; 
+}
+
+.img-blogpost{
+    width:150px;
+    height: 150px; 
 }

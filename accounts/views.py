@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib import auth
-from django.contrib.auth import authenticate 
+from django.contrib.auth import authenticate, logout, login
 from django.http import HttpResponse
 from .forms import UserLoginForm, UserRegistrationForm
+from blogs.models import Post
 # Create your views here.
 
 
@@ -44,7 +45,7 @@ def register(request):
         registration_form = UserRegistrationForm()
     
     
-    return render(request, 'accounts/register.html', {'form': registration_form})
+    return render(request, 'accounts/register.html', {'form': registration_form, })
 
 
 def logout(request):
@@ -53,6 +54,5 @@ def logout(request):
     
     
 def profile(request):
-    
     
     return render(request, 'accounts/profile.html')

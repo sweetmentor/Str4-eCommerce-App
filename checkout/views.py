@@ -17,7 +17,7 @@ def checkout(request):
     if request.method=="POST":
         order_form = OrderForm(request.POST)    
         payment_form = MakePaymentForm(request.POST)
-        print(payment_form.is_valid())
+        print(payment_form.errors)
         if order_form.is_valid() and payment_form.is_valid():
             print("******ODER AND PAYMENT VALID")
             # Save The Order
@@ -57,4 +57,4 @@ def checkout(request):
         context.update(cart_items_and_total)
     
         return render(request, "checkout/checkout.html", context)
-# Create your views here.
+

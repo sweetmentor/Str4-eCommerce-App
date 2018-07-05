@@ -8,13 +8,11 @@
 
 <p>You are logged in as:</p>
 
-<p>{{user.username}}</p>
-<p>{{user.email}}</p>
-
-<h3>Liked Posts</h3>
-{% for post in user.liked_posts.all %}
-<p><a href="*"> Its my account</a></p>
+<img src="{{MEDIA_URL}}{{user.Profile.image}}" width="100px"></img>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Bio: {{ user.Profile.description }}</p>
 
 
-{% endfor %}
+
 {% endblock content %}

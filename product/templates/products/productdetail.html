@@ -11,13 +11,13 @@
   {% endif %}
     <p>{{product.price}}</p>
     <p>{{product.description}}</p>
-    <p>{{ product.brand }}</p>
+    <p>{{product.brand }}</p>
     <form method="POST" action="{% url 'add_to_cart' %}">
             {% csrf_token %} 
-    <input type="hidden" name="product_id" value="{{product.id}}"/>
+    <input type="hidden" name="product_id" value="{{item.product.id}}"/>
     <button type="submit" value="Add To Cart">Add to Cart</button>
     </form>
-    <a href="{% url 'get_products' %}" class="btn btn-default">Back to Products</a>
+    <a href="{% url 'products' %}" class="btn btn-default">Back to Products</a>
 
 
 {% endblock %}
