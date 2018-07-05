@@ -1,6 +1,7 @@
 {% load static from staticfiles %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Chester eCommerce</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
@@ -8,20 +9,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <!-- Fixed masthead -->
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="{% static 'images/logo.jpg' %}"></a>
-                </div>
+
+            </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% if messages %}
@@ -40,7 +41,7 @@
                     <li><a href="{% url 'login' %}">Login</a></li>
                     {% endif %}
                     <li><a href="{% url 'products' %}">Products</a></li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -49,12 +50,18 @@
     <div id="masthead">
         <div class="container">
             <div class="row">
-                <h1> ChesterGreen Merchants
+                <div class="col-md-3">
+                    <a class="navbar-brand" href="/"><img class="logo" src="{% static 'images/logo.jpg' %}"></a>
+                </div>
+                <div class="col-md-9">
+                    <h1> ChesterGreen Merchants
                     <p id="logo" class="lead">For All Your Household Gadgets</p>
-                </h1>
+                    </h1>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -68,7 +75,15 @@
             </div>
         </div>
     </div>
-
+    <footer>
+        <div class="container">
+            <p>ChesterGreen Merchants</p>
+        </div>
+    </footer> 
+    
+    
 </body>
+
+
 
 </html>

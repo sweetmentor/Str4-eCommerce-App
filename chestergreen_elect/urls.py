@@ -18,7 +18,11 @@ from django.urls import path
 from accounts import urls as accounts_urls
 from django.conf.urls import url, include
 from home import urls as home_urls
+from product import urls as products_urls
+from product import views
+from cart import urls as carts_urls
 from django.conf.urls.static import static
+from django.views.generic import RedirectView
 from django.views.static import serve
 from django.conf import settings
 
@@ -26,5 +30,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(home_urls)),
     path('accounts/', include(accounts_urls)),
+    path('cart/', include(carts_urls)),
+    path('products/', include(products_urls)), 
+    path('search/', views.do_search, name='search'),
     path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
