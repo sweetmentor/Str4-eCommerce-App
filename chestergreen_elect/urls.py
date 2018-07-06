@@ -22,6 +22,7 @@ from product import urls as products_urls
 from product import views
 from cart import urls as carts_urls
 from blogs import urls as blogs_urls
+from review import urls as urls_reviews
 from checkout import urls as checkout_urls
 from django.conf.urls.static import static
 from django.views.generic import RedirectView
@@ -36,6 +37,7 @@ urlpatterns = [
     path('products/', include(products_urls)), 
     path('search/', views.do_search, name='search'),
     path('checkout/', include(checkout_urls)),
+    path('reviews/', include(urls_reviews)),
     path('blogs/', include(blogs_urls)),
     path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
 ]

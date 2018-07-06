@@ -32,9 +32,9 @@
     <td>{{ product.brand }}</td>
     <td><a href="{% url 'product_detail' product.id %}" class="btn btn-default">More Detail</a></td>
     <td>
-        <form method="POST" action="{% url 'add_to_cart'%}">
+        <form method="POST" action="{% url 'add_to_cart' %}">
                     {% csrf_token %} 
-                    <input type="hidden" name="product_id" value="{{product.id}}"/>
+            <input type="hidden" name="product_id" value="{{product.id}}"/>
             <button type="submit" value="Add To Cart">Add to Cart</button>
         </form>
     </td>

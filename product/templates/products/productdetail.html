@@ -5,16 +5,34 @@
 {% block content %}
  
  
- <h3>{{ product.name }}</h3>
+ <h3>Title: {{ product.name }}</h3>
  {% if product.image %}
   <img class="prodimage" src="{{MEDIA_URL}}{{product.image}}" width ='250px' height ="200px">
   {% endif %}
-    <p>{{product.price}}</p>
-    <p>{{product.description}}</p>
-    <p>{{product.brand }}</p>
+    <p>Price: €{{product.price}}</p>
+    <p>{{ product.name }} Description{{product.description}}</p>
+    <p>Brand: {{product.brand }}</p>
+    <p>
+       <span class="text-warning">
+                {% for star in product.stars %}
+                <i class="fa fa-star"></i>
+                {% endfor %}
+                {% if product.needs_half_star %}
+                <i class="fa fa-star-half"></i>
+                {% endif %}                
+              </span>
+    
+    {% include "reviews/_show_reviews.html" %}
+
+       {% if user.is_authenticated %}
+       {% include "reviews/_add_review_form.html" %}
+       {% endif %}
+       
+    </p>
+   
     <form method="POST" action="{% url 'add_to_cart' %}">
             {% csrf_token %} 
-    <input type="hidden" name="product_id" value="{{item.product.id}}"/>
+    <input type="hidden" name="product_id" value="{{product.id}}"/>
     <button type="submit" value="Add To Cart">Add to Cart</button>
     </form>
     <a href="{% url 'products' %}" class="btn btn-default">Back to Products</a>

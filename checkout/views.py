@@ -11,6 +11,8 @@ from cart.utils import get_cart_items_and_total
 from .utils import save_order_items, charge_card, send_confirmation_email
 import stripe
 from django.conf import settings
+from django.contrib.auth import authenticate
+
 
 # Create your views here.
 def checkout(request):
@@ -40,11 +42,16 @@ def checkout(request):
                 messages.error(request, "Your card was declined!")
 
             if customer.paid:
-                messages.error(request, "You have successfully paid")
+                messages.error(request, "You have successfully paid.")
 
                 # Send Email
-                send_confirmation_email(request.user.email, request.user, items_and_total)
-        
+                if request.user.is_authenticated:
+                    send_confirmation_email(request.user.email, request.user, items_and_total)
+                
+                else: 
+                    messages.error(request, "Please register for easy shopping experience next time.")
+                
+                    
                 #Clear the Cart
                 del request.session['cart']
                 return redirect("/")
