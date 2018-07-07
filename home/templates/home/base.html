@@ -8,8 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ChesterGreen Merchant</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
-    {% block head_js %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% block head_js %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     {% endblock head_js %}
@@ -20,15 +19,13 @@
     <!-- Fixed masthead -->
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
 
-            </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% if messages %}
@@ -41,11 +38,11 @@
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'products' %}">Products</a></li>
                     <li><a href="{% url 'get_posts' %}">Blogs</a></li>
-                    
+
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'profile' %}">Profile</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
-                    
+
                     {% else %}
                     <li><a href="{% url 'register' %}">Register</a></li>
                     <li><a href="{% url 'login' %}">Login</a></li>
@@ -65,7 +62,7 @@
                 </div>
                 <div class="col-md-9">
                     <h1> ChesterGreen Merchants
-                    <p id="logo" class="lead">For All Your Household Gadgets</p>
+                        <p id="logo" class="lead">For All Your Household Gadgets</p>
                     </h1>
                 </div>
             </div>
@@ -87,11 +84,28 @@
     </div>
     <footer>
         <div class="container">
-            <p>ChesterGreen Merchants</p>
-        </div>
-    </footer> 
-    
-    
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>ChesterGreen Merchants</p>
+
+                </div>
+                <div class="col-sm-6">
+              <a href="https://www.facebook.com/NatconOluyoleJCI/" target="_blank">
+              <img src="pictures/FBlogo.png"></a>
+              <a href="https://www.twitter.com/OluyoleNatcon/" target="_blank">
+              <img src="pictures/twiterlogo.png"></a>
+             <div>
+          </div>
+                </div>
+
+
+            </div>
+
+            <div>
+
+    </footer>
+
+
 </body>
 
 
