@@ -8,8 +8,31 @@ body {
 }
 
 .logo {
-    height: 100px;
-   
+    height: 130px;
+    
+    margin-bottom: 10px;
+}
+
+#masthead h1 {
+    font-size: 55px;
+    line-height: 1;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: green;    
+}
+
+.navbar {
+    background-image: none;
+    background-color: green;
+    height: 50px;
+    font-size: large;
+}
+
+
+
+.social {
+    height: 40px;
+    width: 40px;
 }
 
 footer {
@@ -17,15 +40,16 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    margin-top: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #ededed;
 }
 
 .searchform {
     text-align: right;
     padding-bottom: 40px;
+    padding-top: 40px;
 
 }
 
