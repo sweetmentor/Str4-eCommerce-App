@@ -29,13 +29,28 @@
        {% endif %}
        
     </p>
-   
-    <form method="POST" action="{% url 'add_to_cart' %}">
+   <div class="container">
+     <div class="row">
+      <div class="col-md-6">
+       
+       <form method="POST" action="{% url 'add_to_cart' %}">
             {% csrf_token %} 
     <input type="hidden" name="product_id" value="{{product.id}}"/>
-    <button type="submit" value="Add To Cart">Add to Cart</button>
+    <button class="btn btn-success" type="submit" value="Add To Cart">Add to Cart</button>
     </form>
-    <a href="{% url 'products' %}" class="btn btn-default">Back to Products</a>
+       
+      </div>
+      <div class="col-md-6">
+      
+      <a href="{% url 'products' %}" class="btn btn-default">Back to Products</a>
+      
+       </div>
+      
+     </div>
+    
+   </div>
+    
+    
 
 
 {% endblock %}

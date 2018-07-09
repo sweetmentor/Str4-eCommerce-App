@@ -2,23 +2,24 @@
     width: auto;
 }
 
-body {
+section {
     font-family: Arial;
-    padding-top: 50px;
+    background-color: #EAFAF1;
 }
 
 .logo {
-    height: 130px;
-    
+    height: 110px;
+    padding-top: 40px;
     margin-bottom: 10px;
 }
 
-#masthead h1 {
-    font-size: 55px;
-    line-height: 1;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    color: green;    
+
+@media screen and (max-width: 768px) {
+.logo {
+    height: 90px;
+    
+    
+}
 }
 
 .navbar {
@@ -43,7 +44,7 @@ footer {
     margin-top: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #ededed;
+    background-color: #76D7C4;
 }
 
 .searchform {
@@ -51,6 +52,11 @@ footer {
     padding-bottom: 40px;
     padding-top: 40px;
 
+}
+
+input[type=text] {
+    border: 2px solid green;
+    border-radius: 4px;
 }
 
 .img-circle{
@@ -63,3 +69,44 @@ footer {
     height: 150px; 
 }
 
+#masthead h1 {
+        font-size: 50px;
+        margin-top: 60px;
+        margin-bottom: 10px;
+        color: green;
+        line-height: 1;
+        
+    }
+
+@media screen and (max-width: 768px) {
+    #masthead h1 {
+        font-size: 20px;
+        text-align: center;
+        
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {    
+    .navbar-default .navbar-nav>li>a {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #D35400;
+        text-align: right;
+    }
+}
+
+.btn-default {
+    
+    
+    border-color: green;
+    margin-bottom: 40px;
+}
+
+button [type=submit] {
+    border-color: green;
+    
+}

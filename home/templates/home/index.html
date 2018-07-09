@@ -26,16 +26,16 @@
 <tbody>
 {% for product in products %}
 <tr>
-    <td><img height="100" width="100" src="{{ MEDIA_URL }}{{ product.image }}"></img></td> 
+    <td><a href="{% url 'product_detail' product.id %}"><img height="100" width="100" src="{{ MEDIA_URL }}{{ product.image }}"></img></a></td> 
     <td>{{ product.name }}</td>
     <td>€ {{ product.price }}</td>
     <td>{{ product.brand }}</td>
-    <td><a href="{% url 'product_detail' product.id %}" class="btn btn-default">More Detail</a></td>
+    <td><a href="{% url 'product_detail' product.id %}" class="btn btn-default">Detail</a></td>
     <td>
         <form method="POST" action="{% url 'add_to_cart' %}">
                     {% csrf_token %} 
             <input type="hidden" name="product_id" value="{{product.id}}"/>
-            <button type="submit" value="Add To Cart">Add to Cart</button>
+            <button class="btn btn-success" type="submit" value="Add To Cart">Add to Cart</button>
         </form>
     </td>
 </tr> 
