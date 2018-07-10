@@ -2,10 +2,7 @@
     width: auto;
 }
 
-section {
-    font-family: Arial;
-    background-color: #EAFAF1;
-}
+
 
 .logo {
     height: 110px;
@@ -17,9 +14,7 @@ section {
 @media screen and (max-width: 768px) {
 .logo {
     height: 90px;
-    
-    
-}
+    }
 }
 
 .navbar {
@@ -41,8 +36,8 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    margin-top: 20px;
-    padding-top: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
     padding-bottom: 10px;
     background-color: #76D7C4;
 }
@@ -109,4 +104,15 @@ input[type=text] {
 button [type=submit] {
     border-color: green;
     
+    
 }
+
+section {
+    font-family: Arial;
+    background-color: #EAFAF1;
+    margin-bottom: 70px;
+    
+}
+
+
+

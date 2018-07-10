@@ -48,11 +48,11 @@ These are the things you need to install
 * Feel free to make changes to the code and if you think it belongs in here then just submit a pull request.
 
 ## Testing
-
+* A coverage Test conducted with a report of 73%
 * All code used on the site has been tested to ensure everything is working as expected, by making demo purchase from adding item to cart, deleting from cart to making payment using Stripe.
 * Site viewed and tested in the following browsers:
 Google Chrome and Safari
-* Pages were inspected to test responsiveness
+* Pages were inspected to test responsiveness on both mobile and desktop.
 
 ## Credits
 
@@ -63,4 +63,4 @@ Google Chrome and Safari
 
 ### Codes
 
-* Some of the codes used for this project are results of google search and classroom based work adapted and refactord to meet the project need.
+* Some of the codes used for this project are results of google search and classroom based work adapted and refactored to meet the project need.
