@@ -21,11 +21,10 @@
   <div class="row">
      {% for product in products %}
     <div class="col-sm-4 col-lg-4 col-md-4">
-       
       <div class="x_for_close">
           <div class="thumbnail">
-        <a href="{% url 'product_detail' product.id %}"><img height="200px" width="150px" src="{{ MEDIA_URL }}{{ product.image }}"></img>
-        <h4 class="pull-right">€{{product.price}}</h4>
+            <a href="{% url 'product_detail' product.id %}"><img height="300" width="200" src="{{ MEDIA_URL }}{{ product.image }}"></img>
+            <h4 class="pull-right">€{{product.price}}</h4>
             <h4>{{product.name|truncatechars:20}}</h4>
             </a>
         <form method="POST" action="{% url 'add_to_cart' %}">
@@ -33,14 +32,18 @@
             <input type="hidden" name="product_id" value="{{product.id}}"/>
             <button class="btn" type="submit" value="Add To Cart"><i class="fas fa-cart-plus fa-2x"></i></button>
         </form>
-        <span class="text-warning">
-                {% for star in product.stars %}
-                <i class="fa fa-star"></i>
-                {% endfor %}
-                {% if product.needs_half_star %}
-                <i class="fa fa-star-half"></i>
-                {% endif %}                
-              </span>
+        <div class="card-body">
+
+        {% for review in product.reviews_received.all %}
+        <p><small >Rating 
+          {% for star in review.stars %}
+          &#9733;
+          {% endfor %}
+        </small></p>
+    
+        <hr>
+        {%endfor%}
+    </div>
         </div>
         </div>
 

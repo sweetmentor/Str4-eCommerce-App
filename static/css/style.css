@@ -92,7 +92,7 @@ input[type=text] {
         font-size: 14px;
         line-height: 1.42857143;
         color: #D35400;
-        text-align: right;
+        /*text-align: right;*/
     }
 }
 

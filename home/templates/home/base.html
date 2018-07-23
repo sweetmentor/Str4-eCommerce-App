@@ -18,8 +18,24 @@
 </head>
 
 <body>
+     <div id="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a class="navbar-brand" href="/"><img class="logo" src="{% static 'images/logo.jpg' %}"></a>
+
+                </div>
+                <div class="col-md-10">
+                    <h1> Chester Appliances
+                        <p class="lead">For All Your Household Gadgets</p>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Fixed masthead -->
-    <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-masthead navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -48,9 +64,16 @@
                     <li><a href="{% url 'logout' %}">Logout</a></li>
 
                     {% else %}
-                    <li><a href="{% url 'register' %}">Register</a></li>
-                    <li><a href="{% url 'login' %}">Login</a></li>
-
+                      <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                          My Account <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                         <li><a href="{% url 'register' %}">Register</a></li>
+                         <li><a href="{% url 'login' %}">Login</a></li>
+                        </ul>
+                         </li>
+                   
                     {% endif %}
 
                 </ul>
@@ -59,21 +82,7 @@
 
     </nav>
 
-    <div id="masthead">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <a class="navbar-brand" href="/"><img class="logo" src="{% static 'images/logo.jpg' %}"></a>
-
-                </div>
-                <div class="col-md-10">
-                    <h1> Chester Appliances
-                        <p class="lead">For All Your Household Gadgets</p>
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
 
     <section>
