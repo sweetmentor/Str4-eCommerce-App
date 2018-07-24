@@ -18,35 +18,61 @@
 </head>
 
 <body>
-     <div id="masthead">
-        <div class="container">
+    
+<header class="header">
+       
+        <div id="header-content" class="header-content">
             <div class="row">
-                <div class="col-md-2">
+                    <div class="header-logo col-sm-2">
                     <a class="navbar-brand" href="/"><img class="logo" src="{% static 'images/logo.jpg' %}"></a>
-
-                </div>
-                <div class="col-md-10">
-                    <h1> Chester Appliances
-                        <p class="lead">For All Your Household Gadgets</p>
-                    </h1>
+                    </div>
+                    <div class="col-sm-8">
+                            <div class="header-tittle">
+                                <h1> Chester Appliances
+                                    <p class="lead">For All Your Household Gadgets</p>
+                                </h1>
+                            </div>
+                        <div class="floating_cart navbar-right">
+                            <div>
+                                <a href="{% url 'view_cart' %}">Cart 
+                                {% if items_in_cart %}
+                                <span class="badge item_badge">{{items_in_cart}}</span>
+                                {% else %}
+                                <i class="fas fa-shopping-cart"></i>
+                                {% endif %}
+                                </a>
+                            </div>
+                            <div class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Account
+                                    <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                    {% if user.is_authenticated %}
+                                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                                    {% else %}
+                                    <li><a href="{% url 'register' %}">Register</a></li>
+                                    <li><a href="{% url 'login' %}">Login</a></li>
+                                    {% endif %}
+                                    </ul>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Fixed masthead -->
-    <nav class="navbar navbar-masthead navbar-default">
+ 
+    <div class="navbar navbar-default">
         <div class="container-fluid">
-            <div class="navbar-header">
+          <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse navbar-right">
-                <ul class="nav nav-bar">
+          </div>  
+             <div id="navbar" class="navbar-collapse collapse">   
+                <ul class="nav navbar-nav navbar-right">
                     {% if messages %}
                     <div class="alert alert-success">
                         <div class="messages">
@@ -57,30 +83,52 @@
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'products' %}">Products</a></li>
                     <li><a href="{% url 'get_posts' %}">Blog</a></li>
-                    <li><a href="{% url 'view_cart' %}">Carts</a></li>
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'new_post' %}">New Post</a></li>
-                    <li><a href="{% url 'profile' %}">Profile</a></li>
-                    <li><a href="{% url 'logout' %}">Logout</a></li>
-
-                    {% else %}
                     
-                      <li class="dropdown">
-                        <a class="dropdown-btn" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
-                           Account</a>
-                        <ul class="dropdown-content">
-                         <li><a href="{% url 'register' %}">Register</a></li>
-                         <li><a href="{% url 'login' %}">Login</a></li>
-                        </ul>
-                         </li>
-                   
-                    {% endif %}
+                      {% else %}{% endif %}
 
                 </ul>
             </div>
         </div>
-
-    </nav>
+    </div>
+    
+</header>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+                     
+    
 
    
 
