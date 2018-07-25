@@ -95,7 +95,7 @@ input[type=text] {
         font-size: 14px;
         line-height: 1.42857143;
         color: green;
-        text-align: left;
+        text-align: center;
         background-color: green;
     }
 }
@@ -128,21 +128,15 @@ section {
     
 }
 
-/*li a, .dropbtn {*/
-/*    display: inline-block;*/
-/*    color: white;*/
-/*    text-align: center;*/
-/*    padding: 14px 16px;*/
-/*    text-decoration: none;*/
-/*}*/
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-/*li a:hover, .dropdown:hover .dropbtn {*/
-/*    background-color: red;*/
-/*}*/
 
-/*li.dropdown {*/
-/*    display: inline-block;*/
-/*}*/
 
 .dropdown-content {
     display: none;
@@ -171,6 +165,7 @@ section {
         float: right;
         padding-right: 50px;
         color: green;
+        padding-bottom: 30px;
     }
 }
     
@@ -178,15 +173,17 @@ section {
     
 
 .container-fluid>.navbar-header {
+    margin-right: 0px; 
+    margin-left: 0px;
     background-color: green;
-    
 }
+    
+@media screen and (max-width: 768px) {
 
-.container-fluid {
+.container-fluid>.navbar-header {
     padding-left: 0px;
     padding-right: 0px;
+    background-color: #009688;
 }
 
-.navbar {
-    
 }
