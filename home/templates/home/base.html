@@ -34,8 +34,8 @@
                             </div>
                     </div>
                     <div class="floating_cart navbar-right col-sm-2">
-                            <div>
-                                <a class="cartsim"href="{% url 'view_cart' %}">Cart 
+                            <div class="cartsim">
+                                <a href="{% url 'view_cart' %}">Cart 
                                 {% if items_in_cart %}
                                 <span class="badge item_badge">{{items_in_cart}}</span>
                                 {% else %}
@@ -43,8 +43,8 @@
                                 {% endif %}
                                 </a>
                             </div>
-                            <div class="dropdown">
-                                    <a class="dropdown-toggle cartsim" data-toggle="dropdown" href="#">
+                            <div class="cartsim">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                         Account
                                     <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
