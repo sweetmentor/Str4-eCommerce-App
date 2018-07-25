@@ -82,7 +82,7 @@ input[type=text] {
     .header-tittle h1 {
         font-size: 20px;
         text-align: center;
-        padding-left: 20px;
+        padding-left: 50px;
         
     }
 }
@@ -90,11 +90,11 @@ input[type=text] {
 
 
 @media screen and (max-width: 768px) {    
-    ul.nav.navbar-nav.navbar-right {
+    .navbar-nav {
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 14px;
         line-height: 1.42857143;
-        /*color: #D35400;*/
+        color: green;
         text-align: left;
         background-color: green;
     }
@@ -128,21 +128,21 @@ section {
     
 }
 
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+/*li a, .dropbtn {*/
+/*    display: inline-block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
 
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
+/*li a:hover, .dropdown:hover .dropbtn {*/
+/*    background-color: red;*/
+/*}*/
 
-li.dropdown {
-    display: inline-block;
-}
+/*li.dropdown {*/
+/*    display: inline-block;*/
+/*}*/
 
 .dropdown-content {
     display: none;
@@ -168,7 +168,9 @@ li.dropdown {
 
 @media screen and (max-width: 768px) {
     .floating_cart {
-    padding-right: 20px;
+        float: right;
+        padding-right: 50px;
+        color: green;
     }
 }
     
@@ -183,4 +185,8 @@ li.dropdown {
 .container-fluid {
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.navbar {
+    
 }
