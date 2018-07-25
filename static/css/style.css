@@ -22,7 +22,7 @@
 
 .nav {
     background-image: none;
-    background-color: green;
+    background-color: #FF9800;
     height: 50px;
     font-size: large;
 }
@@ -128,13 +128,13 @@ section {
     
 }
 
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+/*li a, .dropbtn {*/
+/*    display: inline-block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
 
 
 
