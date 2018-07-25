@@ -14,9 +14,9 @@
 
 @media screen and (max-width: 768px) {
 .logo {
-    height: 90px;
+    height: 60px;
     margin-right: 10px;
-    margin-left: 20px;
+    margin-left: 0px;
     }
 }
 
@@ -82,7 +82,8 @@ input[type=text] {
     .header-tittle h1 {
         font-size: 20px;
         text-align: center;
-        padding-left: 50px;
+        float: right;
+        margin-top: 0px;
         
     }
 }
@@ -163,7 +164,6 @@ section {
     .floating_cart {
         float: right;
         padding-right: 50px;
-        color: green;
         padding-bottom: 30px;
     }
 }
@@ -200,3 +200,14 @@ section {
     background-color: #cddc39;
 }
     
+    
+@media screen and (max-width: 768px) {    
+    .lead {
+    font-size: 12px;
+    }
+}
+
+.cartsim{
+    color: #4a4879;
+    
+}
