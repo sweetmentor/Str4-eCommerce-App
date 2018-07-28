@@ -9,14 +9,13 @@
             <button type="submit">Search</button>
         </div>
 </form>
-<h1>View Cart</h1>
+<h1>Your Basket</h1>
 {% if cart_items|length > 0 %}
 <table class="table">
     <thead>
         <tr>
             <th></th>    
-            <th>Product</th>    
-            <th>Quantity</th>    
+            <th>Qty</th>    
             <th>Price</th>
             <th>Total</th> 
             <th></th>
@@ -28,16 +27,19 @@
 {% for item in cart_items %}
 
  <tr>
-            <td><img width="150" height="75" src="{{MEDIA_URL}}{{item.product.image}}"/></td>    
-            <td>{{ item.product.name }}</td>    
-            <td>{{ item.quantity}}</td>    
+     <div class="thumbnail">
+            <td><img width="80" height="75" src="{{MEDIA_URL}}{{item.product.image}}"/>   
+            {{ item.product.name|truncatechars:20 }}    
+            </td> </div>
+            
+            <td>{{ item.quantity}}</td>
             <td>€ {{ item.product.price }}</td>
             <td>€ {{ item.sub_total}}</td>
 
              <td><form method="post" action = "{% url 'remove_from_cart' %}">
                 {% csrf_token %}
                 <input type="hidden" name="product_id" value={{item.product.id}}>
-                <button class="btn btn-success" type="submit">Remove</button>
+                <button class="btn btn-success" type="submit">Rem</button>
                 </form>
             </td>
         </tr>

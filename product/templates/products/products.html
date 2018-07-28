@@ -9,53 +9,75 @@
             <button type="submit">Search</button>
         </div>
     </form>
-  
-<table class="table">
-<thead>
-    <tr>
-        <th></th>    
-        <th>Name</th>    
-        <th>Price</th>
-        <th>Brand</th>
-        <th>Reviews</th> 
-        <th></th> 
-        <th></th>
-  </tr>
-</thead>
-<tbody>
-    {% for product in products %}
-<tr>
-    <td><a href="{% url 'product_detail' product.id %}"><img height="100" width="100" src="{{ MEDIA_URL }}{{ product.image }}"></img></a></td> 
-    <td>{{ product.name }}</td>
-    <td>€ {{ product.price }}</td>
-    <td>{{ product.brand }}</td>
-    <td class="ratings">
-        
-            <p class="pull-right">{{product.reviews_received.all|length}} reviews</p>
-            <p>
-            {% for star in product.stars %}
-            <i class="fa fa-star"></i>
-            {% endfor %}
-            {% if product.needs_half_star %}
-            <i class="fa fa-star-half"></i>
-            {% endif %}  
-            
-            
-      
-    </td>
-    <td><a href="{% url 'product_detail' product.id %}" class="btn btn-default">Detail</a></td>
-    <td>
-            <form method="POST" action="{% url 'add_to_cart'%}">
-                        {% csrf_token %} 
-                        <input type="hidden" name="product_id" value="{{product.id}}"/>
-                <button class="btn btn-success" type="submit" value="Add To Cart">Add to Cart</button>
-            </form>
-        </td>
-    
-</tr> 
-{% endfor %}
-</tbody>
-</table>
 
-{% endblock %}
+<div class="container-fluid">
+  <div class="row">
+     {% for product in products %}
+    <div class="col-sm-4 col-lg-4 col-md-4">
+      <div class="x_for_close">
+          <div class="thumbnail">
+            <a href="{% url 'product_detail' product.id %}"><img height="300" width="200" src="{{ MEDIA_URL }}{{ product.image }}"></img>
+            <h4 class="pull-right">€{{product.price}}</h4>
+            <h4>{{product.name|truncatechars:20}}</h4>
+            </a>
+          
+            <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %} 
+                <input type="hidden" name="product_id" value="{{product.id}}"/>
+                <button class="btn" type="submit" value="Add To Cart"><i class="fas fa-cart-plus fa-2x"></i>Add to Basket</button>
+            </form>
+
+              
+              <div class="ratings">
+                  {% if product.reviews_received.all %}
+                  <p class="pull-right">{{product.reviews_received.all|length}} reviews</p>
+                  {% endif %}
+                {% if product.stars %}
+                  {% for star in product.stars %}
+                    <i class="fas fa-star"></i>
+                  {% endfor %}
+                  {% if product.needs_half_star %}
+                    <i class="fa fa-star-half"></i>
+                  {% endif %}   
+                  {{product.average_rating}} avg rating
+                {% else %}
+                  <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>No reviews yet</p>
+                {% endif %}
+              </div>
+        </div>
         
+        
+        
+        
+        </div>
+
+</div>
+{% endfor %}
+</div>
+</div>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

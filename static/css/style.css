@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:100,200,300,400,500,600,700|Loved+by+the+King|Sofia:100,200,300,400,500,600,700');
+
+
 .navbar-form input, .form-inline input {
     width: auto;
 }
 
+body {
+    font-family: 'IM Fell DW Pica', serif;
+    color: #120749;
+}
 
+h1, h2, h3, h4 {
+    font-family: 'IM Fell DW Pica', serif;
+    color: #8c6e4a;
+    
+}
 
 .logo {
     height: 130px;
@@ -22,7 +34,6 @@
 
 .nav {
     background-image: none;
-    background-color: #FF9800;
     height: 50px;
     font-size: large;
 }
@@ -70,17 +81,20 @@ input[type=text] {
 }
 
 .header-tittle h1 {
-        font-size: 50px;
-        margin-top: 60px;
+        font-family: 'IM Fell DW Pica', serif;
+        font-size: 60px;
+        font-weight: 500;
+        margin-top: 50px;
         margin-bottom: 10px;
-        color: green;
+        color: #8c6e4a;
         line-height: 1;
         
     }
 
 @media screen and (max-width: 768px) {
     .header-tittle h1 {
-        font-size: 20px;
+        font-size: 26px;
+        font-weight: 200;
         text-align: center;
         float: right;
         margin-top: 30px;
@@ -91,15 +105,15 @@ input[type=text] {
 
 
 
-@media screen and (max-width: 768px) {    
-    .navbar-nav {
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 14px;
-        color: green;
-        text-align: center;
+/*@media screen and (max-width: 768px) {    */
+/*    .navbar-nav {*/
+/*        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+/*        font-size: 14px;*/
+/*        color: green;*/
+/*        text-align: center;*/
        
-    }
-}
+/*    }*/
+/*}*/
 
 
 
@@ -139,43 +153,21 @@ section {
 
 
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/*.dropdown-content a {*/
-/*    color: black;*/
-/*    padding: 12px 16px;*/
-/*    text-decoration: none;*/
-/*    display: block;*/
-/*    text-align: left;*/
+/*.dropdown-content {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    background-color: #f9f9f9;*/
+/*    min-width: 160px;*/
+/*    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+/*    z-index: 1;*/
 /*}*/
 
-.cartsim {
-    margin-top: 20px;
-    color: #4a4879;
-}
-
-@media screen and (max-width: 768px) {
-    .cartsim{
-        float: right;
-        padding-right: 50px;
-        padding-bottom: 30px;
-    }
-}
-    
     
     
 
 .container-fluid>.navbar-header {
     margin-right: 0px; 
     margin-left: 0px;
-   
 }
     
 @media screen and (max-width: 768px) {
@@ -189,8 +181,9 @@ section {
 }
 
 .navbar-default {
-    background-color: #ff9800;
-    border-color: #ff9800;
+    background-color: #46884787;
+    border-color: #73a839;
+    
 }
 
 .navbar {
@@ -200,13 +193,65 @@ section {
 .navbar-toggle:hover {
     background-color: #cddc39;
 }
-    
+  
+.lead {
+    margin-top: 10px;
+    font-family: 'Sofia', cursive;
+}  
     
 @media screen and (max-width: 768px) {    
     .lead {
-    font-size: 12px;
+    font-size: 14px;
     }
 }
 
-
+.floating_cart {
+    margin-top: 20px;
     
+}
+
+@media screen and (max-width: 768px) {
+    .floating_cart{
+    float: right;
+    padding-right: 60px;
+    margin-bottom: 10px;
+    margin-left: 69px;
+    margin-top: 0px;
+
+    }
+}
+    
+.badgelog, .dropdown-toggle {
+    color: #4a4879;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    background-color: #17cc3e;
+}
+
+.dropdown-menu {    
+    width: 100px;
+    margin-right: 30px;
+    min-width: 0px;
+}  
+
+header {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+.navbar-right {
+    
+    margin-right: 0px; 
+}
+}
+
+.row {
+    margin-left: 0px; 
+    margin-right: 0px; 
+}
+
+.home_page_text h3 {
+    font-family: 'IM Fell DW Pica', serif;
+    color: #120749;
+}
