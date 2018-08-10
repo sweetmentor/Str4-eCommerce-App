@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:100,200,300,400,500,600,700|Loved+by+the+King|Sofia:100,200,300,400,500,600,700');
+
+
+.navbar-form input, .form-inline input {
+    width: auto;
+}
+
+body {
+    font-family: 'IM Fell DW Pica', serif;
+    color: #120749;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'IM Fell DW Pica', serif;
+    color: #8c6e4a;
+    
+}
+
+.logo {
+    height: 130px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+.logo {
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 0px;
+    }
+}
+
+.nav {
+    background-image: none;
+    height: 50px;
+    font-size: large;
+}
+
+
+
+.social {
+    height: 40px;
+    width: 40px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #76D7C4;
+}
+
+.searchform {
+    text-align: right;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    width: 40%;
+    margin-top: 10px;
+
+}
+
+input[type=text] {
+    border: 2px solid green;
+    border-radius: 4px;
+}
+
+.img-circle{
+    width:100px;
+    height: 100px; 
+}
+
+.img-blogpost{
+    width:150px;
+    height: 150px; 
+}
+
+.header-tittle h1 {
+        font-family: 'IM Fell DW Pica', serif;
+        font-size: 60px;
+        font-weight: 500;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        color: #8c6e4a;
+        line-height: 1;
+        
+    }
+
+@media screen and (max-width: 768px) {
+    .header-tittle h1 {
+        font-size: 26px;
+        font-weight: 200;
+        text-align: center;
+        float: right;
+        margin-top: 30px;
+        margin-right: 30px;
+        
+    }
+}
+
+
+
+/*@media screen and (max-width: 768px) {    */
+/*    .navbar-nav {*/
+/*        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+/*        font-size: 14px;*/
+/*        color: green;*/
+/*        text-align: center;*/
+       
+/*    }*/
+/*}*/
+
+
+
+.btn-default {
+    
+    
+    border-color: green;
+    margin-bottom: 40px;
+}
+
+button [type=submit] {
+    border-color: green;
+    
+    
+}
+
+section {
+    font-family: Arial;
+    background-color: #EAFAF1;
+    margin-bottom: 70px;
+    
+}
+
+.index_page_images {
+    width: 200px;
+    height: 200px;
+    
+}
+
+/*li a, .dropbtn {*/
+/*    display: inline-block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+
+
+/*.dropdown-content {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    background-color: #f9f9f9;*/
+/*    min-width: 160px;*/
+/*    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+/*    z-index: 1;*/
+/*}*/
+
+    
+    
+
+.container-fluid>.navbar-header {
+    margin-right: 0px; 
+    margin-left: 0px;
+}
+    
+@media screen and (max-width: 768px) {
+
+.container-fluid>.navbar-header {
+    padding-left: 0px;
+    padding-right: 0px;
+ 
+}
+
+}
+
+.navbar-default {
+    background-color: #46884787;
+    border-color: #73a839;
+    
+}
+
+.navbar {
+    background-image: none;
+}
+
+.navbar-toggle:hover {
+    background-color: #cddc39;
+}
+  
+.lead {
+    margin-top: 10px;
+    font-family: 'Sofia', cursive;
+}  
+    
+@media screen and (max-width: 768px) {    
+    .lead {
+    font-size: 14px;
+    }
+}
+
+.floating_cart {
+    margin-top: 20px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .floating_cart{
+    float: right;
+    padding-right: 60px;
+    margin-bottom: 10px;
+    margin-left: 69px;
+    margin-top: 0px;
+
+    }
+}
+    
+.badgelog, .dropdown-toggle {
+    color: #4a4879;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    background-color: #17cc3e;
+}
+
+.dropdown-menu {    
+    width: 100px;
+    margin-right: 30px;
+    min-width: 0px;
+}  
+
+header {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+.navbar-right {
+    
+    margin-right: 0px; 
+}
+}
+
+.row {
+    margin-left: 0px; 
+    margin-right: 0px; 
+}
+
+.home_page_text h3 {
+    font-family: 'IM Fell DW Pica', serif;
+    color: #120749;
+}
