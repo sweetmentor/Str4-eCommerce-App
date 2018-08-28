@@ -80,7 +80,7 @@
         <form method="POST" action="{% url 'add_to_cart' %}">
                     {% csrf_token %} 
             <input type="hidden" name="product_id" value="{{product.id}}"/>
-            <button class="btn" type="submit" value="Add To Cart"><i class="fas fa-cart-plus fa-2x"></i></button>
+            <button class="btn" type="submit" value="Add To Cart"><i class="fas fa-cart-plus fa-2x"></i> Add to Basket</button>
         </form>
               <div class="ratings">
                   {% if product.reviews_received.all %}

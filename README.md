@@ -45,6 +45,7 @@ This was used to give the project a simple, responsive layout with lots of defau
 
 * A coverage Test conducted with a report of 73% available [here](https://str4-ecommerce-sweetmentor.c9users.io/htmlcov/index.html) and in test_report folder of this project.
 * All code used on the site has been tested to ensure everything is working as expected, by making demo purchase from adding item to cart, deleting from cart to making payment using Stripe.
+* Anonymous User trying to add post from the browser by hacking the https should throw a "ValueError at /blogs/new/ Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fc3cfdc7da0>>": "Post.author" must be a "User" instance".
 * Site viewed and tested in the following browsers:
 Google Chrome and Safari
 * Pages were inspected to test responsiveness on both mobile and desktop.
